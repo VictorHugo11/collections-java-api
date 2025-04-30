@@ -36,14 +36,14 @@ public class Livro {
                 '}';
     }
 
-    class ComparatorPorPreco implements Comparator<Map.Entry<String, Livro>> {
+    static class ComparatorPorPreco implements Comparator<Map.Entry<String, Livro>> {
         @Override
         public int compare(Map.Entry<String, Livro> l1, Map.Entry<String, Livro> l2) {
             return Double.compare(l1.getValue().getPreco(), l2.getValue().getPreco());
         }
     }
 
-    class ComparatorPorAutor implements Comparator<Map.Entry<String, Livro>> {
+    static class ComparatorPorAutor implements Comparator<Map.Entry<String, Livro>> {
         @Override
         public int compare(Map.Entry<String, Livro> l1, Map.Entry<String, Livro> l2) {
             return l1.getValue().getAutor().compareToIgnoreCase(l2.getValue().getAutor());
